@@ -1,20 +1,84 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function MotionEffects() {
   const progressRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const [userPaused, setUserPaused] = useState(false);
+
+  useEffect(() => {
+    const sync = () => setUserPaused(document.documentElement.dataset.userMotion === "paused");
+    sync(); window.addEventListener("portfolio-motion", sync);
+    return () => window.removeEventListener("portfolio-motion", sync);
+  }, []);
 
   useEffect(() => {
     let disposed = false;
     let cleanup = () => {};
 
     async function initialize() {
-      const [{ gsap }, { ScrollTrigger }, { default: Lenis }] = await Promise.all([
-        import("gsap"), import("gsap/ScrollTrigger"), import("lenis")
+      if (userPaused) return;
+      const pointerCanHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      if (!pointerCanHover) {
+        const preference = window.matchMedia("(prefers-reduced-motion: no-preference)");
+        const elements = Array.from(document.querySelectorAll<HTMLElement>(".section-heading, .about-text, .principle, .service-card, .skill-group, .project-card, .timeline-item, .education-card, .contact-form, .footer-signature"));
+        let observer: IntersectionObserver | undefined;
+        let frame = 0;
+        const update = () => {
+          frame = 0;
+          const maximum = document.documentElement.scrollHeight - innerHeight;
+          if (progressRef.current) progressRef.current.style.transform = `scaleX(${maximum > 0 ? scrollY / maximum : 0})`;
+          const timeline = document.querySelector<HTMLElement>(".timeline");
+          if (timeline) {
+            const bounds = timeline.getBoundingClientRect();
+            timeline.style.setProperty("--timeline-progress", String(Math.max(0, Math.min(1, (innerHeight * .8 - bounds.top) / bounds.height))));
+          }
+        };
+        const scroll = () => { if (!frame) frame = requestAnimationFrame(update); };
+        const focus = (event: FocusEvent) => {
+          elements.filter(element => element.contains(event.target as Node)).forEach(element => element.classList.remove("motion-reveal-pending"));
+        };
+        const stop = () => {
+          observer?.disconnect(); cancelAnimationFrame(frame); frame = 0;
+          window.removeEventListener("scroll", scroll);
+          document.removeEventListener("focusin", focus);
+          elements.forEach(element => element.classList.remove("motion-reveal-pending", "motion-reveal-visible"));
+          document.documentElement.classList.remove("touch-motion");
+          delete document.documentElement.dataset.motion;
+        };
+        const sync = () => {
+          stop();
+          if (!preference.matches) return;
+          document.documentElement.dataset.motion = "enabled";
+          document.documentElement.classList.add("touch-motion");
+          observer = new IntersectionObserver(entries => entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const element = entry.target as HTMLElement;
+            element.classList.remove("motion-reveal-pending");
+            element.classList.add("motion-reveal-visible");
+            if (element.matches(".timeline-item")) element.style.setProperty("--milestone-progress", "1");
+            observer?.unobserve(element);
+          }), {rootMargin:"0px 0px -7% 0px"});
+          elements.forEach(element => {
+            if (element.getBoundingClientRect().top > innerHeight * .93) {
+              element.classList.add("motion-reveal-pending");
+              observer?.observe(element);
+            }
+          });
+          document.addEventListener("focusin", focus);
+          window.addEventListener("scroll", scroll, {passive:true});
+          update();
+        };
+        sync(); preference.addEventListener("change", sync);
+        cleanup = () => { preference.removeEventListener("change", sync); stop(); };
+        return;
+      }
+      const [{ gsap }, { ScrollTrigger }, lenisModule] = await Promise.all([
+        import("gsap"), import("gsap/ScrollTrigger"), pointerCanHover ? import("lenis") : Promise.resolve(null)
       ]);
+      const Lenis = lenisModule?.default;
       if (disposed) return;
       gsap.registerPlugin(ScrollTrigger);
       const media = gsap.matchMedia();
@@ -24,7 +88,7 @@ export default function MotionEffects() {
         document.documentElement.dataset.motion = "enabled";
         const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
         const small = window.innerWidth < 768;
-        const lenis = finePointer ? new Lenis({
+        const lenis = finePointer && Lenis ? new Lenis({
           lerp: 0.085, smoothWheel: true, syncTouch: false,
           anchors: { offset: -28 },
           prevent: node => node.tagName === "TEXTAREA" || node.hasAttribute("data-lenis-prevent")
@@ -38,9 +102,9 @@ export default function MotionEffects() {
         const entrance = gsap.timeline({ defaults: { duration: 0.8, ease: "power3.out", clearProps: "opacity,visibility,transform" } })
           .from(".header", { y: -18, autoAlpha: 0 }, 0);
         if(document.querySelector(".hero")) entrance
-          .from(".hero-main > *", { y: 32, autoAlpha: 0, stagger: 0.095 }, 0.12)
+          .from(".hero-main > :not(h1)", { y: 32, autoAlpha: 0, stagger: 0.095 }, 0.12)
           .from(".hero-facts > div", { x: 20, autoAlpha: 0, stagger: 0.12 }, 0.65);
-        else entrance.from(".page-intro > *",{y:24,opacity:0,stagger:0.08},0.12);
+        else entrance.from(".page-intro > :not(h1)",{y:24,opacity:0,stagger:0.08},0.12);
 
         gsap.utils.toArray<HTMLElement>(".hero-facts strong").forEach((number, index) => {
           gsap.to(number, {
@@ -78,12 +142,6 @@ export default function MotionEffects() {
         if(document.querySelector(".orbit-two")) gsap.fromTo(".orbit-two", { rotation: 25 }, {
           rotation: -65, ease: "none",
           scrollTrigger: { trigger: "#about", start: "top bottom", end: "bottom top", scrub: 1 }
-        });
-        gsap.utils.toArray<HTMLElement>(".content-section").forEach(section => {
-          gsap.fromTo(section, { "--section-progress": 0 }, {
-            "--section-progress": 1, ease: "none",
-            scrollTrigger: { trigger: section, start: "top 85%", end: "bottom 65%", scrub: 0.5 }
-          });
         });
         if(document.querySelector(".timeline")) gsap.fromTo(".timeline", { "--timeline-progress": 0 }, {
           "--timeline-progress": 1, ease: "none",
@@ -177,7 +235,7 @@ export default function MotionEffects() {
     }
     initialize().catch(() => { /* Server-rendered content remains usable if motion cannot load. */ });
     return () => { disposed = true; cleanup(); };
-  }, [pathname]);
+  }, [pathname, userPaused]);
 
   return <div className="scroll-progress" aria-hidden="true"><div ref={progressRef} className="scroll-progress-fill"/></div>;
 }

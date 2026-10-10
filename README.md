@@ -1,44 +1,33 @@
-# Animated Next.js portfolio
+# Sandip Nakrani portfolio
 
-A complete responsive multipage portfolio for Sandip Nakrani, populated from his supplied CV. The animated hero uses the original MP4; the original JPEG frames are preserved. Routes include Home (`/`), About with experience, education and skills (`/about`), Services (`/services`), Projects (`/projects`), Contact (`/contact`), and six individual project pages (`/projects/[slug]`). The landing page is a complete scrolling overview with about, capabilities, technology, all six projects, experience, education, and the contact form. Section links open the dedicated pages; About includes the complete skill groups and career contributions, Services adds the working process, and project pages explain individual contributions. Shared navigation highlights the active page. Every page has its own title and description; the domain-aware sitemap includes all routes.
+A responsive Next.js portfolio with Home, About, Services, Projects, Contact, and six project case-study routes. Shared profile data lives in app/content.ts. Contact details appear in the shared footer. Cards and controls use square corners, cream/yellow accents, and burgundy surfaces.
 
-Project cards use wide cream panels with burgundy hover titles, outlined numbers, technology tags, and expandable contribution lists, inspired by the supplied screen recording. Toolkit cards use dark rounded panels with icon tiles and outlined numbers. The shared footer includes a large Sandip Nakrani name link that changes color on hover. Contact links use the CV's email, phone, and LinkedIn; the form prepares a local email draft and does not send automatically. The original CV is available for download at `/documents/Sandip-Nakrani-CV.pdf`.
+## Local preview
 
-## Run locally
+Run npm ci, then npm run dev. Use http://127.0.0.1:3000/. For a production preview, run npm run build and npm start.
 
-```powershell
-npm.cmd install
-npm.cmd run dev
-```
+## Public deployment
 
-Open http://localhost:3000. For a production preview, run `npm.cmd run build` followed by `npm.cmd start`.
+Set NEXT_PUBLIC_SITE_URL to the actual public HTTPS origin before building. The origin drives canonical URLs, Open Graph URLs, sitemap entries, Person identity, page schema, and breadcrumb schema. No public domain is inferred from the GitHub repository.
 
-## Animation
+Run npm run build:release after setting the environment variable. The deployment check intentionally rejects missing, localhost, non-HTTPS, and path-containing URLs. Local builds remain available without a public domain.
 
-`npm.cmd run prepare:media` uses `assets/source-original.mp4` to create a 3840×2160 master in the project root, three H.264 background versions, a WebP poster, and a social sharing image. To change the input, pass a video path after `--`. The source video is 1280×720 at 24 fps: the 4K output is upscaled, not native 4K, and cannot restore missing detail. The small source-video symbol is removed from the generated variants and poster, while the original source file is preserved. Its original timing is retained. The sequence plays forward and backward for a smooth 20-second loop.
+## Content and contact
 
-Mobile uses a 1280px video, desktop uses 1920px, and screens wider than 1920px use the 3840px video. All use cover cropping to fit the viewport. The lighter gradient preserves text contrast without unnecessarily darkening the workspace. Reduced-motion and data-saving preferences show the poster by default. Video pauses while the page is hidden or the hero is off-screen.
+Edit profile, skills, services, and verified project contributions in app/content.ts. Additional biography and career content is in app/components/sections.tsx. The About page includes concise answers based on the supplied experience. Project pages provide context, technology, and contributions; richer outcomes and screenshots require approved source material.
 
-## Personalize
+The contact form collects First Name, Last Name, Email, Mobile, Topics, and Description. Send opens an email draft with the entered details; the website does not submit or store them. Native email validation and phone-number checks run before opening the draft. Actual server-side email delivery requires a provider, credentials, and an agreed data-handling flow.
 
-- Edit the profile, project records, capabilities, and skill groups in `app/content.ts`.
-- Edit the introduction and employment/education sections in `app/components/hero.tsx` and `app/components/sections.tsx`.
-- Edit page title, description, and sharing metadata in `app/layout.tsx`.
-- Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` to the real public domain before deployment. Canonical links and sitemap URLs then use that domain.
+## Motion and media
 
-Server-rendered text, one primary heading, descriptive metadata, Person structured data, Open Graph / Twitter sharing images, robots.txt, and a domain-aware sitemap provide the SEO foundation. Public indexing requires deployment to a public domain. `node scripts/update-social-image.mjs` regenerates the personalized social sharing image without re-encoding the videos.
+The hero initially renders a responsive WebP poster. Decorative video loading starts after the initial content has rendered. Mobile uses a 768px H.264 video and other screens use a 1280px video, matching the available source detail rather than downloading an upscaled 4K file. Video pauses when off-screen or the document is hidden, resumes when appropriate, and switches variants after a viewport resize. Reduced-motion and data-saving preferences prevent playback.
 
-## Motion
+Pause motion stops both the video and decorative animation. That choice persists across client navigation until a full page reload. System reduced-motion preferences take precedence. Cards briefly shrink and return to their original size; the contact form remains stable. Phone ringing, icon rotation, and footer name hover feedback remain available with motion enabled. Fine-pointer devices use GSAP, Lenis, and magnetic button movement. Touch devices use lightweight native reveal observers and retain native scrolling.
 
-GSAP ScrollTrigger drives staggered content reveals, hero video parallax, section borders, timeline progress, and the footer name reveal. Fine-pointer devices also get Lenis smooth wheel/anchor scrolling, magnetic buttons, card tilt, and pointer-following highlights. Touch devices keep native scrolling with smaller reveal distances. Every animation respects live reduced-motion changes; content remains server-rendered and visible if JavaScript is unavailable. Project expansion refreshes the scroll measurements.
+Run npm run prepare:media to regenerate optimized media from assets/source-original.mp4. The original source and locally generated master are preserved. The small source-video symbol is removed from generated variants and posters. The forward/reverse loop preserves the original 24fps timing. The unused public 4K version is no longer shipped.
 
-The animation controller cleans up and reinitializes GSAP and smooth scrolling on client-side page navigation. It only creates hero, orbit, or timeline effects when those elements exist on the current page.
+## Verification
 
-## Verification commands
+Run npm run build, start the production preview, then npm run verify. The checks cover all eleven routes at five viewport sizes, titles and descriptions, navigation, overflow, download and 404 behavior, scroll reveals, card reset, menu focus, phone validation, project breadcrumbs, pause controls, and live preference changes. Set PLAYWRIGHT_BASE_URL to test a different preview origin. Installed Chrome is required.
 
-```powershell
-npm.cmd run build
-node scripts/verify-pages.mjs
-```
-
-The page verifier expects a running server at localhost:3000 and installed Chrome. It checks all eleven routes at five viewport sizes, unique metadata, active navigation, mobile menu behavior, CV download, invalid project 404s, and animation initialization after client navigation. The older `verify-preview.mjs` and `verify-motion.mjs` entry points delegate to this verifier.
+GitHub Actions runs the build and verification suite for pushes and pull requests. The workflow does not deploy the website. The audit and remaining external work are tracked in docs/.

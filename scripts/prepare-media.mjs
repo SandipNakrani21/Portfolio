@@ -27,12 +27,13 @@ await run(['-i', savedSource, '-vf', `${cleanFrame},scale=3840:2160:flags=lanczo
 console.log('Saved 3840x2160 master in the project folder');
 // Reverse at source resolution to avoid buffering 4K frames in memory.
 // Keep the original 24 fps timing, with a forward-and-reverse loop.
-for (const [name, width, crf] of [['4k',3840,18], ['desktop',1920,18], ['mobile',1280,20]]) {
+for (const [name, width, crf] of [['desktop',1280,25], ['mobile',768,26]]) {
   await run(['-i',savedSource,'-filter_complex',`[0:v]${cleanFrame},split[a][b];[b]reverse[r];[a][r]concat=n=2:v=1:a=0,scale=${width}:-2:flags=lanczos,setsar=1[out]`,'-map','[out]',...encoding,'-crf',String(crf),`${output}/hero-${name}.mp4`]);
   console.log(`Created ${name} background (${width}px wide)`);
 }
 const poster = resolve('assets/video-poster.png');
 await run(['-i',savedSource,'-vf',cleanFrame,'-frames:v','1',poster]);
-await sharp(poster).resize(1920,1080).webp({quality:92}).toFile(`${output}/hero-poster.webp`);
+await sharp(poster).resize(1280,720).webp({quality:80}).toFile(`${output}/hero-poster.webp`);
+await sharp(poster).resize(768,432).webp({quality:78}).toFile(`${output}/hero-poster-mobile.webp`);
 await import('./update-social-image.mjs');
 console.log('Updated poster and social sharing image');

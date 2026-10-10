@@ -1,0 +1,1711 @@
+{
+  "date": "2026-10-10",
+  "url": "http://127.0.0.1:3000/",
+  "pages": [
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/about",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/services",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/projects",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/contact",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/projects/rostering",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/projects/microservices",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/projects/containers",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/projects/real-estate",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/projects/parts",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 2560,
+      "height": 1440,
+      "route": "/projects/cold-storage",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/about",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/services",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projects",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/contact",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projects/rostering",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projects/microservices",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projects/containers",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projects/real-estate",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projects/parts",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "route": "/projects/cold-storage",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/about",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/services",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/projects",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/contact",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/projects/rostering",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/projects/microservices",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/projects/containers",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/projects/real-estate",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/projects/parts",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "route": "/projects/cold-storage",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/about",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/services",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/projects",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/contact",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/projects/rostering",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/projects/microservices",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/projects/containers",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/projects/real-estate",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/projects/parts",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "route": "/projects/cold-storage",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/about",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/services",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/projects",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/contact",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/projects/rostering",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/projects/microservices",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/projects/containers",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/projects/real-estate",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/projects/parts",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "route": "/projects/cold-storage",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/about",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/services",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/projects",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/contact",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/projects/rostering",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/projects/microservices",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/projects/containers",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/projects/real-estate",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/projects/parts",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "route": "/projects/cold-storage",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/about",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/services",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/projects",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/contact",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/projects/rostering",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/projects/microservices",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/projects/containers",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/projects/real-estate",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/projects/parts",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    },
+    {
+      "width": 320,
+      "height": 740,
+      "route": "/projects/cold-storage",
+      "status": 200,
+      "h1": 1,
+      "overflow": 0,
+      "heroOverlap": false,
+      "canonical": null,
+      "og": "http://localhost:3000/media/og-image.jpg"
+    }
+  ],
+  "errors": [],
+  "links": [
+    {
+      "link": "/",
+      "status": 200
+    },
+    {
+      "link": "/about",
+      "status": 200
+    },
+    {
+      "link": "/services",
+      "status": 200
+    },
+    {
+      "link": "/projects",
+      "status": 200
+    },
+    {
+      "link": "/contact",
+      "status": 200
+    },
+    {
+      "link": "/documents/Sandip-Nakrani-CV.pdf",
+      "status": 200
+    },
+    {
+      "link": "/about#experience",
+      "status": 200
+    },
+    {
+      "link": "/about#skills",
+      "status": 200
+    },
+    {
+      "link": "/projects/rostering",
+      "status": 200
+    },
+    {
+      "link": "/projects/microservices",
+      "status": 200
+    },
+    {
+      "link": "/projects/containers",
+      "status": 200
+    },
+    {
+      "link": "/projects/real-estate",
+      "status": 200
+    },
+    {
+      "link": "/projects/parts",
+      "status": 200
+    },
+    {
+      "link": "/projects/cold-storage",
+      "status": 200
+    }
+  ],
+  "server": {
+    "/robots.txt": {
+      "status": 200,
+      "text": "User-Agent: *\nAllow: /\n\n"
+    },
+    "/sitemap.xml": {
+      "status": 200,
+      "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n</urlset>\n"
+    },
+    "/projects/not-a-project": {
+      "status": 404,
+      "text": "<!DOCTYPE html><html id=\"__next_error__\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"preload\" as=\"script\" fetchPriority=\"low\" href=\"/_next/static/chunks/2evgu094glu3w.js\"/><script src=\"/_next/static/chunks/3i-jq3pnp43nq.js\" async=\"\"></script><script src=\"/_next/static/chunks/3dmm3v_fq28gc.js\" async=\"\"></script><script src=\"/_next/static/chunks/turbopack-3-ry682tkyiqk.js\" async=\"\"></script><meta name=\"robots\" content=\"noindex\"/><meta name=\"theme-color\" content=\"#08090b\"/><title>Sandip Nakrani | Senior Full Stack Developer — .NET, Angular &amp; React</title><meta name=\"description\" content=\"Sandip Nakrani, Senior Full Stack Developer in Ahmedabad with 5+ years of experience. Enterprise .NET and Angular applications, React SaaS platforms, SQL Server, and Azure DevOps.\"/><meta name=\"author\" content=\"Sandip Nakrani\"/><meta name=\"robots\" content=\"index, follow\"/><meta property=\"og:title\" content=\"Sandip Nakrani — Senior Full St"
+    }
+  },
+  "accessibility": [
+    {
+      "width": 1440,
+      "route": "/",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".nav-active"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.86 (foreground color: #b85a54, background color: #121a22, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.86 (foreground color: #b85a54, background color: #121a22, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".about-text > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#skills > .section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".section-heading-row > .section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-intro > .section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-code > em"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".inline-link[href$=\"contact\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 188
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/about",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".nav-active"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".about-text > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#skills > .section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 90
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/services",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".nav-active"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "section[aria-labelledby=\"process-title\"] > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 48
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/projects",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".nav-active"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 76
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/contact",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".nav-active"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "em"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/projects/rostering",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".nav-active"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".case-overview > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".eyebrow"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.86 (foreground color: #b85a54, background color: #121a22, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".about-text > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "#skills > .section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".section-heading-row > .section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".contact-intro > .section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".inline-link[href$=\"contact\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 187
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/projects",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 76
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/contact",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": [
+            {
+              "target": [
+                ".section-heading > .section-label"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.38 (foreground color: #b85a54, background color: #0d0809, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "count": 1
+        },
+        {
+          "id": "color-contrast",
+          "count": 14
+        }
+      ]
+    }
+  ],
+  "motion": {
+    "hovers": [
+      {
+        "selector": ".primary-action",
+        "before": {
+          "width": 144.5625,
+          "height": 46,
+          "layoutWidth": 145,
+          "layoutHeight": 46,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        "during": {
+          "width": 148.40719604492188,
+          "height": 47.22332763671875,
+          "layoutWidth": 145,
+          "layoutHeight": 46,
+          "scale": "1.0266",
+          "transform": "matrix(1, 0, 0, 1, 1.7213, -0.0001)",
+          "animation": "control-zoom-return"
+        },
+        "after": {
+          "width": 144.5625,
+          "height": 46,
+          "layoutWidth": 145,
+          "layoutHeight": 46,
+          "scale": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "animation": "none"
+        }
+      },
+      {
+        "selector": ".hero-download",
+        "before": {
+          "width": 141.265625,
+          "height": 48,
+          "layoutWidth": 141,
+          "layoutHeight": 48,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        "during": {
+          "width": 143.73773193359375,
+          "height": 48.8399658203125,
+          "layoutWidth": 141,
+          "layoutHeight": 48,
+          "scale": "1.0175",
+          "transform": "matrix(1, 0, 0, 1, 1.6924, -0.0001)",
+          "animation": "control-zoom-return"
+        },
+        "after": {
+          "width": 141.265625,
+          "height": 48,
+          "layoutWidth": 141,
+          "layoutHeight": 48,
+          "scale": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "animation": "none"
+        }
+      },
+      {
+        "selector": ".nav-contact",
+        "before": {
+          "width": 133.515625,
+          "height": 46,
+          "layoutWidth": 134,
+          "layoutHeight": 46,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        "during": {
+          "width": 135.8450927734375,
+          "height": 46.80255126953125,
+          "layoutWidth": 134,
+          "layoutHeight": 46,
+          "scale": "1.01745",
+          "transform": "matrix(1, 0, 0, 1, 1.5997, 0)",
+          "animation": "control-zoom-return"
+        },
+        "after": {
+          "width": 133.515625,
+          "height": 46,
+          "layoutWidth": 134,
+          "layoutHeight": 46,
+          "scale": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "animation": "none"
+        }
+      },
+      {
+        "selector": ".outline-button",
+        "before": {
+          "width": 187.890625,
+          "height": 48,
+          "layoutWidth": 188,
+          "layoutHeight": 48,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        "during": {
+          "width": 191.15643310546875,
+          "height": 48.83428955078125,
+          "layoutWidth": 188,
+          "layoutHeight": 48,
+          "scale": "1.01738",
+          "transform": "matrix(1, 0, 0, 1, 2.2507, -0.0003)",
+          "animation": "control-zoom-return"
+        },
+        "after": {
+          "width": 187.890625,
+          "height": 48,
+          "layoutWidth": 188,
+          "layoutHeight": 48,
+          "scale": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "animation": "none"
+        }
+      },
+      {
+        "selector": ".service-card",
+        "before": {
+          "width": 306,
+          "height": 357.75,
+          "layoutWidth": 306,
+          "layoutHeight": 358,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        "during": {
+          "width": 287.8985595703125,
+          "height": 336.5872802734375,
+          "layoutWidth": 306,
+          "layoutHeight": 358,
+          "scale": "0.940845",
+          "transform": "none",
+          "animation": "card-zoom-return"
+        },
+        "after": {
+          "width": 306,
+          "height": 357.75,
+          "layoutWidth": 306,
+          "layoutHeight": 358,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        }
+      },
+      {
+        "selector": ".skill-group",
+        "before": {
+          "width": 414.65625,
+          "height": 313.390625,
+          "layoutWidth": 415,
+          "layoutHeight": 313,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        "during": {
+          "width": 389.7939453125,
+          "height": 294.60009765625,
+          "layoutWidth": 415,
+          "layoutHeight": 313,
+          "scale": "0.940041",
+          "transform": "none",
+          "animation": "card-zoom-return"
+        },
+        "after": {
+          "width": 414.65625,
+          "height": 313.390625,
+          "layoutWidth": 415,
+          "layoutHeight": 313,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        }
+      },
+      {
+        "selector": ".project-card",
+        "before": {
+          "width": 1296,
+          "height": 304,
+          "layoutWidth": 1296,
+          "layoutHeight": 304,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        "during": {
+          "width": 1219.333984375,
+          "height": 286.0166015625,
+          "layoutWidth": 1296,
+          "layoutHeight": 304,
+          "scale": "0.940844",
+          "transform": "none",
+          "animation": "card-zoom-return"
+        },
+        "after": {
+          "width": 1296,
+          "height": 304,
+          "layoutWidth": 1296,
+          "layoutHeight": 304,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        }
+      },
+      {
+        "selector": ".accent-button",
+        "before": {
+          "width": 137.125,
+          "height": 52,
+          "layoutWidth": 137,
+          "layoutHeight": 52,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        "during": {
+          "width": 131.2552490234375,
+          "height": 49.77410888671875,
+          "layoutWidth": 137,
+          "layoutHeight": 52,
+          "scale": "1.01738",
+          "transform": "matrix(1, 0, 0, 1, 1.376, -0.0003)",
+          "animation": "control-zoom-return"
+        },
+        "after": {
+          "width": 137.125,
+          "height": 52,
+          "layoutWidth": 137,
+          "layoutHeight": 52,
+          "scale": "none",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "animation": "none"
+        }
+      },
+      {
+        "selector": ".contact-form",
+        "before": {
+          "width": 841.5,
+          "height": 807.953125,
+          "layoutWidth": 842,
+          "layoutHeight": 808,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        },
+        "during": {
+          "width": 792.393798828125,
+          "height": 760.8045654296875,
+          "layoutWidth": 842,
+          "layoutHeight": 808,
+          "scale": "0.941644",
+          "transform": "none",
+          "animation": "card-zoom-return"
+        },
+        "after": {
+          "width": 841.5,
+          "height": 807.953125,
+          "layoutWidth": 842,
+          "layoutHeight": 808,
+          "scale": "1",
+          "transform": "none",
+          "animation": "none"
+        }
+      },
+      {
+        "selector": ".footer-signature",
+        "before": {
+          "width": 258.5,
+          "height": 44.921875,
+          "layoutWidth": 259,
+          "layoutHeight": 45,
+          "scale": "none",
+          "transform": "none",
+          "animation": "none"
+        },
+        "during": {
+          "width": 258.5,
+          "height": 44.921875,
+          "layoutWidth": 259,
+          "layoutHeight": 45,
+          "scale": "none",
+          "transform": "none",
+          "animation": "none"
+        },
+        "after": {
+          "width": 258.5,
+          "height": 44.921875,
+          "layoutWidth": 259,
+          "layoutHeight": 45,
+          "scale": "none",
+          "transform": "none",
+          "animation": "none"
+        }
+      }
+    ],
+    "navigation": [
+      {
+        "route": "Services",
+        "url": "http://127.0.0.1:3000/services",
+        "motion": "enabled",
+        "h1": 1
+      },
+      {
+        "route": "Projects",
+        "url": "http://127.0.0.1:3000/projects",
+        "motion": "enabled",
+        "h1": 1
+      },
+      {
+        "route": "Contact",
+        "url": "http://127.0.0.1:3000/contact",
+        "motion": "enabled",
+        "h1": 1
+      },
+      {
+        "route": "About",
+        "url": "http://127.0.0.1:3000/about",
+        "motion": "enabled",
+        "h1": 1
+      },
+      {
+        "route": "Home",
+        "url": "http://127.0.0.1:3000/",
+        "motion": "enabled",
+        "h1": 1
+      }
+    ],
+    "reveals": [
+      {
+        "opacity": "1",
+        "transform": "none"
+      }
+    ],
+    "errors": [],
+    "videoInitial": {
+      "paused": false,
+      "src": "http://127.0.0.1:3000/media/hero-desktop.mp4?v=clean-video",
+      "time": 9.607262
+    },
+    "expansion": {
+      "open": true,
+      "height": 202
+    },
+    "videoResume": {
+      "paused": false,
+      "src": "http://127.0.0.1:3000/media/hero-desktop.mp4?v=clean-video",
+      "time": 19.287771
+    },
+    "reducedVideo": {
+      "paused": true,
+      "src": "http://127.0.0.1:3000/media/hero-desktop.mp4?v=clean-video",
+      "time": 19.313839
+    },
+    "reducedMotion": {
+      "animations": 0
+    },
+    "restoredVideo": {
+      "paused": true,
+      "src": "http://127.0.0.1:3000/media/hero-desktop.mp4?v=clean-video",
+      "time": 19.313839
+    },
+    "mobileEscape": {
+      "active": "<a class=\"\" href=\"/about\">About</a>",
+      "navDisplay": "none"
+    }
+  },
+  "lighthouse": {
+    "mobile": {
+      "scores": {
+        "performance": 0.85,
+        "accessibility": 0.96,
+        "best-practices": 1,
+        "seo": 1,
+        "agentic-browsing": 1
+      },
+      "metrics": {
+        "first-contentful-paint": "1.0 s",
+        "largest-contentful-paint": "3.4 s",
+        "total-blocking-time": "310 ms",
+        "cumulative-layout-shift": "0",
+        "total-byte-weight": "Total size was 4,059 KiB"
+      }
+    },
+    "desktop": {
+      "scores": {
+        "performance": 1,
+        "accessibility": 0.96,
+        "best-practices": 1,
+        "seo": 1,
+        "agentic-browsing": 1
+      },
+      "metrics": {
+        "first-contentful-paint": "0.3 s",
+        "largest-contentful-paint": "0.8 s",
+        "total-blocking-time": "0 ms",
+        "cumulative-layout-shift": "0",
+        "total-byte-weight": "Total size was 10,983 KiB"
+      }
+    }
+  }
+}

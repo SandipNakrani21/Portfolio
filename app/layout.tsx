@@ -3,8 +3,8 @@ import "./globals.css";
 import "lenis/dist/lenis.css";
 import SiteFooter from "./components/site-footer";
 import MotionEffects from "./components/motion-effects";
+import { siteUrl, personSchema, jsonLd } from "./site-config";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl || "http://localhost:3000"),
   ...(siteUrl ? { alternates: { canonical: "/" } } : {}),
@@ -19,5 +19,5 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { width: "device-width", initialScale: 1, themeColor: "#08090b" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><body><div id="top"/><a className="skip-link" href="#main">Skip to content</a><MotionEffects/>{children}<SiteFooter/></body></html>;
+  return <html lang="en"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd(personSchema)}}/><div id="top"/><a className="skip-link" href="#main">Skip to content</a><MotionEffects/>{children}<SiteFooter/></body></html>;
 }

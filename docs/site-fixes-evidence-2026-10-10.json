@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-10",
+  "layout": {
+    "combinations": 77,
+    "overflow": [],
+    "heroCollisions": [],
+    "browserErrors": []
+  },
+  "finalAccessibility": [
+    {
+      "route": "/",
+      "violations": []
+    },
+    {
+      "route": "/about",
+      "violations": []
+    },
+    {
+      "route": "/services",
+      "violations": []
+    },
+    {
+      "route": "/projects",
+      "violations": []
+    },
+    {
+      "route": "/contact",
+      "violations": []
+    },
+    {
+      "route": "/projects/rostering",
+      "violations": []
+    }
+  ],
+  "configuredDomainVerification": {
+    "testOrigin": "https://portfolio.example",
+    "persisted": false,
+    "canonical": true,
+    "personIdentity": true,
+    "breadcrumbSchema": true,
+    "sitemapRouteCount": 11,
+    "robotsSitemap": true
+  },
+  "mobileLab": {
+    "scores": {
+      "performance": 0.95,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1,
+      "agentic-browsing": 1
+    },
+    "metrics": {
+      "largest-contentful-paint": "2.8 s",
+      "total-blocking-time": "120 ms",
+      "cumulative-layout-shift": "0",
+      "total-byte-weight": "Total size was 1,053 KiB"
+    }
+  },
+  "media": {
+    "hero-desktop.mp4": 2260077,
+    "hero-mobile.mp4": 833136,
+    "hero-poster.webp": 34760,
+    "hero-poster-mobile.webp": 17858
+  }
+}

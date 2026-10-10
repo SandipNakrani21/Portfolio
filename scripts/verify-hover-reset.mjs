@@ -1,3 +1,4 @@
+const baseUrl = process.env.PLAYWRIGHT_BASE_URL || 'http://127.0.0.1:3000';
 import { chromium } from '@playwright/test';
 import assert from 'node:assert/strict';
 
@@ -8,7 +9,7 @@ try {
     ['/projects', ['.project-card']],
     ['/', ['.principle', '.service-card', '.skill-group', '.project-card']],
   ]) {
-    await page.goto(`http://127.0.0.1:3000${route}`, { waitUntil: 'networkidle' });
+    await page.goto(`${baseUrl}${route}`, { waitUntil: 'networkidle' });
     await page.waitForFunction(() => document.documentElement.dataset.motion === 'enabled');
     for (const selector of selectors) {
       const cards = page.locator(selector);

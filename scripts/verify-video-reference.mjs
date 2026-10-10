@@ -1,9 +1,10 @@
+const baseUrl = process.env.PLAYWRIGHT_BASE_URL || 'http://127.0.0.1:3000';
 import {chromium} from '@playwright/test';
 import assert from 'node:assert/strict';
 const browser=await chromium.launch({channel:'chrome',headless:true});
 try {
  const page=await browser.newPage({viewport:{width:1440,height:900}});
- await page.goto('http://localhost:3000/',{waitUntil:'networkidle'});
+ await page.goto(baseUrl + "/",{waitUntil:'networkidle'});
  const card=page.locator('.reference-project').first();
  await card.scrollIntoViewIfNeeded();
  await page.waitForFunction(()=>Number(getComputedStyle(document.querySelector('.reference-project')).opacity)>.99);
