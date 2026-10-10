@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+*.log
+*.tsbuildinfo
+.env*
+!.env.example
+test-results/
+playwright-report/
+# Local reference reviews and reproducible media master
+assets/cv-review-*.png
+Man_typing_on_keyboard_20261010132006-3840x2160.mp4
+# One-time local page migration helpers
+scripts/split-pages.mjs
+scripts/update-navigation.mjs
