@@ -128,18 +128,18 @@ export default function MotionEffects() {
           });
 
           gsap.utils.toArray<HTMLElement>(".principle, .service-card, .project-card, .skill-group").forEach(card => {
-            const rx = gsap.quickTo(card, "rotationX", { duration: 0.45, ease: "power3.out" });
-            const ry = gsap.quickTo(card, "rotationY", { duration: 0.45, ease: "power3.out" });
-            gsap.set(card, { transformPerspective: 1000 });
+            // Keep hover transforms in CSS so GSAP cannot cache a partial zoom.
             const move = (event: PointerEvent) => {
               const bounds = card.getBoundingClientRect();
               const px = (event.clientX - bounds.left) / bounds.width;
               const py = (event.clientY - bounds.top) / bounds.height;
-              rx((0.5 - py) * 5); ry((px - 0.5) * 5);
               card.style.setProperty("--pointer-x", `${px * 100}%`);
               card.style.setProperty("--pointer-y", `${py * 100}%`);
             };
-            const leave = () => { rx(0); ry(0); };
+            const leave = () => {
+              card.style.removeProperty("--pointer-x");
+              card.style.removeProperty("--pointer-y");
+            };
             card.addEventListener("pointermove", move);
             card.addEventListener("pointerleave", leave);
             removeListeners.push(() => { card.removeEventListener("pointermove", move); card.removeEventListener("pointerleave", leave); card.style.removeProperty("--pointer-x"); card.style.removeProperty("--pointer-y"); });

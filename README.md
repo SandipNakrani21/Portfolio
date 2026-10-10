@@ -15,7 +15,7 @@ Open http://localhost:3000. For a production preview, run `npm.cmd run build` fo
 
 ## Animation
 
-`npm.cmd run prepare:media` uses `assets/source-original.mp4` to create a 3840×2160 master in the project root, three H.264 background versions, a WebP poster, and a social sharing image. To change the input, pass a video path after `--`. The source video is 1280×720 at 24 fps: the 4K output is upscaled, not native 4K, and cannot restore missing detail. Its original timing is retained. The sequence plays forward and backward for a smooth 20-second loop.
+`npm.cmd run prepare:media` uses `assets/source-original.mp4` to create a 3840×2160 master in the project root, three H.264 background versions, a WebP poster, and a social sharing image. To change the input, pass a video path after `--`. The source video is 1280×720 at 24 fps: the 4K output is upscaled, not native 4K, and cannot restore missing detail. The small source-video symbol is removed from the generated variants and poster, while the original source file is preserved. Its original timing is retained. The sequence plays forward and backward for a smooth 20-second loop.
 
 Mobile uses a 1280px video, desktop uses 1920px, and screens wider than 1920px use the 3840px video. All use cover cropping to fit the viewport. The lighter gradient preserves text contrast without unnecessarily darkening the workspace. Reduced-motion and data-saving preferences show the poster by default. Video pauses while the page is hidden or the hero is off-screen.
 

@@ -11,7 +11,7 @@ function Arrow({ diagonal = false }: { diagonal?: boolean }) {
 
 function backgroundSource() {
   const variant = window.innerWidth < 768 ? "mobile" : window.innerWidth > 1920 ? "4k" : "desktop";
-  return `/media/hero-${variant}.mp4?v=original-video`;
+  return `/media/hero-${variant}.mp4?v=clean-video`;
 }
 
 export default function Hero() {
@@ -48,7 +48,7 @@ export default function Hero() {
   }, []);
 
   return <section className="hero" id="home" aria-label="Portfolio introduction">
-    <div className="scene" aria-hidden="true"><video ref={videoRef} muted loop playsInline preload="none" poster="/media/hero-poster.webp?v=original-video" /><div className="scene-shade" /></div>
+    <div className="scene" aria-hidden="true"><video ref={videoRef} muted loop playsInline preload="none" poster="/media/hero-poster.webp?v=clean-video" /><div className="scene-shade" /></div>
     <SiteHeader/>
     <div className="hero-main">
       <div className="eyebrow"><span className="eyebrow-line" /> &lt; HELLO, I’M /&gt;</div>

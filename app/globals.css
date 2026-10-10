@@ -220,3 +220,30 @@ body:has(> .landing-page) .footer-links-row{border-bottom:0}
   .principle:hover,.service-card:hover,.project-card:hover,.skill-group:hover,.education-card:hover,.timeline-item:hover,.contact-details:hover{animation:card-zoom-return .65s ease-in-out 1;transform-origin:center}
 }
 @media(prefers-reduced-motion:reduce){.principle:hover,.service-card:hover,.project-card:hover,.skill-group:hover,.education-card:hover,.timeline-item:hover,.contact-details:hover{animation:none;scale:1}}
+
+/* No full-width horizontal page dividers anywhere on the site. */
+.content-section,.header,.page-intro,.footer-links-row{border-bottom:0}
+.content-section:after{display:none}
+.site-footer{border-top:0}
+
+/* Warm yellow opening sections on every dedicated page. */
+.inner-page .page-intro{position:relative;isolation:isolate;background:transparent;padding:clamp(56px,5vw,88px) 0;color:#352326}
+.inner-page .page-intro:before{content:'';position:absolute;inset:0 auto 0 calc(50% - 50vw);width:100vw;background:linear-gradient(120deg,#eddbc0,#d5b897);z-index:-1;pointer-events:none}
+.inner-page .page-intro h1{color:#352326;font-family:Arial,Helvetica,sans-serif;font-size:clamp(40px,5vw,72px);font-weight:700;line-height:1.12;letter-spacing:-2.5px}
+.inner-page .page-intro>p:last-child{color:#493035;font-size:15px;line-height:1.85}
+.inner-page .page-intro .breadcrumb{color:#493035}
+.inner-page .page-intro .breadcrumb>span,.inner-page .page-intro .breadcrumb a:hover,.inner-page .page-intro .section-label{color:var(--accent-deep)}
+.inner-page .page-intro .section-label>span{background:var(--accent-deep)}
+@media(max-width:767px){.inner-page .page-intro{padding:48px 0}.inner-page .page-intro h1{font-size:38px;letter-spacing:-1.3px}.inner-page .page-intro>p:last-child{font-size:13px}}
+.inner-page .page-intro h1{color:var(--accent-deep)}
+.inner-page .page-intro .breadcrumb{justify-content:flex-end;text-align:right}
+
+/* Stronger hover zoom; cancelling hover always restores the original scale. */
+@keyframes card-zoom-return{0%,100%{scale:1}40%{scale:.94}}
+@keyframes control-zoom-return{0%,100%{scale:1}35%{scale:.97}72%{scale:1.055}}
+.principle,.service-card,.project-card,.skill-group,.education-card,.timeline-item,.contact-details,.contact-form,.primary-action,.accent-button,.hero-download,.outline-button,.nav-contact,.menu-toggle,.inline-link,.footer-top{scale:1;transform-origin:center}
+@media(hover:hover) and (pointer:fine){
+  .principle:hover,.service-card:hover,.project-card:hover,.skill-group:hover,.education-card:hover,.timeline-item:hover,.contact-details:hover,.contact-form:hover{animation:card-zoom-return .85s ease-in-out 1}
+  .primary-action:hover,.accent-button:hover,.hero-download:hover,.outline-button:hover,.nav-contact:hover,.menu-toggle:hover,.inline-link:hover,.footer-top:hover{animation:control-zoom-return .7s ease-in-out 1}
+}
+@media(prefers-reduced-motion:reduce){.principle:hover,.service-card:hover,.project-card:hover,.skill-group:hover,.education-card:hover,.timeline-item:hover,.contact-details:hover,.contact-form:hover,.primary-action:hover,.accent-button:hover,.hero-download:hover,.outline-button:hover,.nav-contact:hover,.menu-toggle:hover,.inline-link:hover,.footer-top:hover{animation:none;scale:1}}
