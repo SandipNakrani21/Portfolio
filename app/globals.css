@@ -247,3 +247,33 @@ body:has(> .landing-page) .footer-links-row{border-bottom:0}
   .primary-action:hover,.accent-button:hover,.hero-download:hover,.outline-button:hover,.nav-contact:hover,.menu-toggle:hover,.inline-link:hover,.footer-top:hover{animation:control-zoom-return .7s ease-in-out 1}
 }
 @media(prefers-reduced-motion:reduce){.principle:hover,.service-card:hover,.project-card:hover,.skill-group:hover,.education-card:hover,.timeline-item:hover,.contact-details:hover,.contact-form:hover,.primary-action:hover,.accent-button:hover,.hero-download:hover,.outline-button:hover,.nav-contact:hover,.menu-toggle:hover,.inline-link:hover,.footer-top:hover{animation:none;scale:1}}
+
+/* Spacious enquiry form and contact details shared by every page. */
+.contact-section{grid-template-columns:minmax(0,.75fr) minmax(0,1.65fr);gap:clamp(32px,5vw,80px);align-items:start}
+.contact-section .contact-form{padding:clamp(24px,3vw,48px)}
+.contact-form label{font-size:16px;gap:12px;color:var(--cream)}
+.contact-form .form-row{gap:24px;margin-bottom:24px}
+.contact-form .form-topic{margin-bottom:24px}
+.contact-form input,.contact-form textarea{padding:18px 20px;font-size:16px;line-height:1.6}
+.contact-form textarea{min-height:220px}
+.contact-form button{font-size:16px;padding:12px 22px;gap:26px;margin-top:24px}
+.contact-form .form-help{font-size:13px;margin-top:20px}
+.footer-contact-details{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;margin:0 0 32px;font-style:normal}
+.footer-contact-details>a,.footer-contact-details>div{display:grid;grid-template-columns:40px minmax(0,1fr);align-items:start;gap:14px;min-width:0}
+.footer-contact-details svg,.footer-contact-details .linkedin-mark{color:var(--accent);width:24px;flex-shrink:0}
+.footer-contact-details>*>div{display:flex;flex-direction:column;gap:8px;min-width:0;padding-top:1px}
+.footer-contact-details>*>div>span{font-size:14px;line-height:1.5;color:var(--cream)}
+.footer-contact-details .footer-contact-icon{display:grid;place-items:center;width:40px;height:40px;background:#b85a5412;color:var(--accent)}
+.footer-contact-details .linkedin-mark{text-align:center;font-size:21px;line-height:1}
+.footer-contact-details strong{font-size:15px;font-weight:400;line-height:1.6;color:var(--muted);overflow-wrap:anywhere;transition:color .25s}
+.footer-contact-details>a:hover strong{color:var(--cream)}
+.site-footer{padding-top:40px;padding-bottom:32px}
+.footer-links-row{display:grid;grid-template-columns:1fr auto 1fr;padding:16px 0;gap:24px}
+.footer-links-row .footer-nav{grid-column:2;justify-content:center;gap:32px;line-height:1.5}
+.footer-links-row .footer-top{grid-column:3;justify-self:end}
+.footer-copyright{align-items:baseline;padding-top:16px;gap:16px}
+.footer-copyright .footer-signature{padding:0;font-size:clamp(26px,2.6vw,38px);line-height:1.2}
+@media(max-width:1000px){.contact-section{grid-template-columns:1fr}.contact-section .section-heading h2{max-width:none}.footer-contact-details{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:601px) and (max-width:1200px){.footer-contact-details{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 40px}}
+@media(max-width:767px){.footer-links-row{display:flex;justify-content:space-between;gap:20px}.footer-links-row .footer-nav{gap:20px;justify-content:flex-start}.footer-copyright{align-items:center;gap:8px 14px;padding-top:20px}.footer-copyright .footer-signature{font-size:28px}.site-footer{padding-top:32px}}
+@media(max-width:600px){.contact-form .form-row{grid-template-columns:1fr;gap:24px}.contact-section .contact-form{padding:24px 20px}.contact-form input,.contact-form textarea{padding:16px}.footer-contact-details{grid-template-columns:1fr;gap:24px;margin-bottom:24px}}

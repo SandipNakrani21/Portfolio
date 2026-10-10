@@ -2,7 +2,7 @@ import Link from "next/link";
 import ContactForm from "./contact-form";
 import ProjectList from "./project-list";
 import Icon from "./ui-icon";
-import { profile, services, skills } from "../content";
+import { services, skills } from "../content";
 
 function SectionHeading({ label, title, accent, description }: {label:string;title:string;accent?:string;description?:string}) {
   return <div className="section-heading"><p className="section-label"><span/> {label}</p><h2>{title} {accent && <span>{accent}</span>}</h2>{description && <p className="section-description">{description}</p>}</div>;
@@ -38,5 +38,4 @@ export function ExperienceSection({ overview = false }: { overview?: boolean }) 
 export function ContactSection() { return (<section className="content-section contact-section" id="contact" aria-label="Contact Sandip">
         <div className="contact-intro"><SectionHeading label="GET IN TOUCH" title="Let’s build something" accent="that works." description="Have a project in mind or a full stack opportunity? Let’s start a conversation."/><div className="contact-code" aria-hidden="true"><span>const</span> nextProject = <span>await</span><br/>buildSomething(<em>"together"</em>);</div></div>
         <ContactForm/>
-        <address className="contact-details"><a href={`mailto:${profile.email}`}><Icon name="mail"/><div><span>Email</span><strong>{profile.email}</strong></div></a><a href="tel:+917878782189"><Icon name="phone"/><div><span>Phone</span><strong>{profile.phone}</strong></div></a><div><Icon name="pin"/><div><span>Based in</span><strong>{profile.location}</strong></div></div><a href={profile.linkedin} target="_blank" rel="noopener noreferrer"><span className="linkedin-mark">in</span><div><span>Connect on LinkedIn</span><strong>Sandip Nakrani ↗</strong></div></a></address>
       </section>); }
