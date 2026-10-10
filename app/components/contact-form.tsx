@@ -1,28 +1,42 @@
 "use client";
 import { useState } from "react";
 import Icon from "./ui-icon";
-import { profile } from "../content";
 
 export default function ContactForm() {
   const [notice, setNotice] = useState("");
-  function prepareEmail(event: React.FormEvent<HTMLFormElement>) {
+  const [sending, setSending] = useState(false);
+  const [failed, setFailed] = useState(false);
+  async function sendEmail(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const name = [data.get("firstName"), data.get("lastName")]
-      .map((value) => String(value || "").trim())
-      .join(" ");
-    const email = String(data.get("email") || "").trim();
-    const message = String(data.get("message") || "").trim();
-    const mobile = String(data.get("mobile") || "").trim();
-    const topic = String(data.get("topic") || "").trim();
-    const body = `Hi Sandip,\n\n${message}\n\nTopic: ${topic}\nFrom: ${name}\nEmail: ${email}\nMobile: ${mobile}`;
-    window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(`${topic} — ${name}`)}&body=${encodeURIComponent(body)}`;
-    setNotice(
-      "Your email app will open with a draft. Review it there and send when ready.",
-    );
+    if (sending) return;
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    setSending(true);
+    setNotice("");
+    setFailed(false);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Object.fromEntries(data)),
+      });
+      const result = await response.json();
+      setFailed(!response.ok);
+      setNotice(result.message || "Please try again.");
+      if (response.ok) form.reset();
+    } catch {
+      setFailed(true);
+      setNotice("Couldn't connect. Your details are still here; please try again.");
+    } finally {
+      setSending(false);
+    }
   }
   return (
-    <form className="contact-form" onSubmit={prepareEmail} action={`mailto:${profile.email}`} method="post" encType="text/plain">
+    <form className="contact-form" onSubmit={sendEmail} aria-busy={sending}>
+      <fieldset disabled={sending} className="contact-fields">
+      <div className="contact-honeypot" aria-hidden="true">
+        <label>Website<input name="website" tabIndex={-1} autoComplete="off" /></label>
+      </div>
       <div className="form-row">
         <label>
           First Name
@@ -101,19 +115,16 @@ export default function ContactForm() {
           maxLength={4000}
         />
       </label>
-      <p className="form-help" id="email-draft-help">
-        Send opens a draft in your email app. Review it there to send your
-        message.
-      </p>
       <button
         className="accent-button"
         type="submit"
-        aria-describedby="email-draft-help"
+        disabled={sending}
       >
-        Send <Icon name="mail" size={18} />
+        {sending ? "Sending…" : "Send Email"} <Icon name="mail" size={18} />
       </button>
+      </fieldset>
       {notice && (
-        <p className="form-help" role="status">
+        <p className="form-help" role={failed ? "alert" : "status"}>
           {notice}
         </p>
       )}

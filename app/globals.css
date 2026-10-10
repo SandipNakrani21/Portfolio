@@ -84,9 +84,9 @@ h2,h3,p {
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: 840px;
-  height: 100svh;
-  max-height: 1200px;
+  min-height: 760px;
+  height: clamp(760px,calc(100svh - 160px),1040px);
+  max-height: 1040px;
   overflow: hidden;
   background: #121a22;
 }
@@ -150,7 +150,7 @@ h2,h3,p {
 }
 
 .navigation>a:hover,.navigation .nav-active {
-  color: var(--accent-text);
+  color: var(--accent-deep);
 }
 
 .nav-active:after {
@@ -184,8 +184,8 @@ h2,h3,p {
 
 .hero-main {
   position: absolute;
-  top: 50%;
-  transform: translateY(-43%);
+  top: calc(50% + 10px);
+  transform: translateY(-50%);
   left: var(--page-pad);
   transition: opacity .5s,transform .5s;
 }
@@ -357,7 +357,7 @@ h2,h3,p {
 
 .about-block {
   display: grid;
-  grid-template-columns: .7fr 1.3fr 1.25fr;
+  grid-template-columns: 1.2fr 1fr;
   align-items: center;
 }
 
@@ -809,6 +809,22 @@ summary::-webkit-details-marker {
 
 .contact-form {
   min-width: 0;
+}
+
+.contact-fields {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.contact-honeypot {
+  display: none;
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: .75;
 }
 
 .contact-form label {
@@ -1264,12 +1280,6 @@ summary::-webkit-details-marker {
   .form-row {
     grid-template-columns: 1fr;
     gap: 16px;
-  }
-}
-
-@media (max-height:800px) and (min-width:768px) {
-  .hero {
-    height: 900px;
   }
 }
 
@@ -3500,7 +3510,7 @@ body:has(> .landing-page) .footer-links-row {
   color: var(--accent);
 }
 
-.section-label,.eyebrow,.nav-active,.service-card>a,.overview-detail-link>.inline-link,.contact-code em {
+.section-label,.eyebrow,.service-card>a,.overview-detail-link>.inline-link,.contact-code em {
   color: var(--accent-text);
 }
 
@@ -3580,6 +3590,28 @@ body:has(> .landing-page) .footer-links-row {
 
 .hero-facts>div>span {
   font-size: 13px;
+}
+
+@media (min-width:768px) {
+  .hero-facts {
+    top: clamp(140px,calc(50% - 180px),320px);
+    transform: none;
+    margin-top: 0;
+    width: clamp(150px,10vw,175px);
+    min-width: 0;
+    padding: 4px 10px;
+  }
+  .hero-facts>div,.hero-facts>div:last-child {
+    padding: 22px 0;
+    gap: 10px;
+  }
+  .hero-facts strong {
+    font-size: clamp(30px,2vw,36px);
+  }
+  .hero-facts>div>span {
+    font-size: 12px;
+    line-height: 1.5;
+  }
 }
 
 .hero-poster {

@@ -16,7 +16,11 @@ Run npm run build:release after setting the environment variable. The deployment
 
 Edit profile, skills, services, and verified project contributions in app/content.ts. Additional biography and career content is in app/components/sections.tsx. The About page includes concise answers based on the supplied experience. Project pages provide context, technology, and contributions; richer outcomes and screenshots require approved source material.
 
-The contact form collects First Name, Last Name, Email, Mobile, Topics, and Description. Send opens an email draft with the entered details; the website does not submit or store them. Native email validation and phone-number checks run before opening the draft. Actual server-side email delivery requires a provider, credentials, and an agreed data-handling flow.
+The contact form collects First Name, Last Name, Email, Mobile, Topics, and Description. Send Email submits to /api/contact, which validates the fields and sends an HTML and plain-text email to sandipdpatel2189@gmail.com through SMTP. The authenticated sender is used for From; the visitor is set as Reply-To. Details stay in the form on failure and clear only after the SMTP server accepts the message. The website does not save submitted messages in a database or log personal details.
+
+Copy .env.example to .env.local and set SMTP_PASSWORD to a Gmail App Password for SMTP_USER. Keep SMTP_HOST=smtp.gmail.com, SMTP_PORT=465, SMTP_SECURE=true, and SMTP_FROM matching that Gmail account. Gmail App Passwords require 2-Step Verification and may not be available for every account. See https://support.google.com/accounts/answer/185833 and https://nodemailer.com/guides/using-gmail. Never commit credentials or use NEXT_PUBLIC_ for SMTP secrets. Restart the local server after changing environment settings; configure the same variables as secrets on your hosting provider.
+
+Other SMTP providers can use their supplied host, credentials, and verified sender, with port 587 and SMTP_SECURE=false for enforced STARTTLS, or port 465 and SMTP_SECURE=true for TLS. A Node.js hosting runtime is required; static-only hosting cannot send emails. Delivery includes the visitor's details and an IST submission timestamp, with subject `[Portfolio enquiry] Topic — First Last`. No auto-reply is sent to visitors. Basic same-origin checks, a honeypot, bounded requests, and per-process rate limits are included. For public hosting across multiple instances, configure a shared hosting-edge rate limiter or CAPTCHA. Real Gmail delivery remains to be tested once credentials are configured; SMTP acceptance does not guarantee inbox placement.
 
 ## Motion and media
 
@@ -31,3 +35,5 @@ Run npm run prepare:media to regenerate optimized media from assets/source-origi
 Run npm run build, start the production preview, then npm run verify. The checks cover all eleven routes at five viewport sizes, titles and descriptions, navigation, overflow, download and 404 behavior, scroll reveals, card reset, menu focus, phone validation, project breadcrumbs, pause controls, and live preference changes. Set PLAYWRIGHT_BASE_URL to test a different preview origin. Installed Chrome is required.
 
 GitHub Actions runs the build and verification suite for pushes and pull requests. The workflow does not deploy the website. The audit and remaining external work are tracked in docs/.
+
+Run npm run verify:contact after building to verify validation, HTML escaping, TLS SMTP delivery, recipient and Reply-To headers, rejected delivery, rate limits, and form success/error/pending states. This starts an isolated local SMTP fixture with test-only credentials; no real emails are sent. OpenSSL is required (Git for Windows includes it; OPENSSL_PATH can override its location).

@@ -32,7 +32,7 @@ export default function SiteHeader() {
     <header className="header">
       <Link className="wordmark" href="/" aria-label="Sandip Nakrani home">
         <span aria-hidden="true">
-          S<span>N.</span>
+          S<span>N</span>
         </span>
       </Link>
       <nav

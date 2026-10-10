@@ -54,7 +54,7 @@
 ## Pending work
 
 1. **Actual public domain and hosting.** Supply/set the real HTTPS origin as NEXT_PUBLIC_SITE_URL. Run npm run build:release for the deployment. Verify canonicals, sitemap, robots, sharing images, redirects, and HTTPS on that host. The local sitemap remains intentionally empty until a domain is provided.
-2. **Actual email delivery, if wanted.** Choose a provider and configure credentials and a verified recipient. Then implement server-side validation, abuse protection, delivery success/error states, and an appropriate privacy explanation. Until then, Send opens an email draft.
+2. **SMTP configuration and real inbox verification.** Updated 11 October: server-side email delivery, validation, abuse protection, templates, and success/error states are now implemented. Add private SMTP credentials and verify delivery to the real inbox. See [SMTP setup](smtp-contact-setup.md). The previous draft flow has been replaced.
 3. **Approved project evidence.** Supply accurate project dates, problem/constraint/outcome details, measurable results where available, screenshots that may be published, and any authorized demo/code links. Do not invent metrics or disclose private client work.
 4. **Production performance follow-up.** Retest on the actual host and slow mobile connections. LCP improved to 2.8 s in this lab run but should be tuned toward 2.5 s or less. Measure real-user Core Web Vitals/INP after deployment before making further performance claims.
 5. **Real-device/accessibility acceptance.** Check iPhone/Safari, Android/Chrome, Edge, Firefox, portrait/landscape, 200% zoom, keyboard-only navigation, screen readers, real email handlers, and moving-video contrast. Chromium emulation cannot replace every device/browser test.

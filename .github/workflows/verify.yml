@@ -22,3 +22,5 @@ jobs:
             sleep 1
           done
           npm run verify
+      - name: Verify SMTP contact delivery with a local fixture
+        run: npm run verify:contact
