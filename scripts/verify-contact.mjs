@@ -88,6 +88,9 @@ try {
   browser=await chromium.launch({channel:'chrome',headless:true});
   const page=await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
   await page.goto(`${base}/contact`);
+  await page.locator('[name="firstName"]').focus();
+  const focusStyle = await page.locator('[name="firstName"]').evaluate(e=>({outline:getComputedStyle(e).outlineStyle,shadow:getComputedStyle(e).boxShadow,border:getComputedStyle(e).borderTopStyle}));
+  assert.deepEqual(focusStyle,{outline:'none',shadow:'none',border:'solid'});
   for(const [key,value] of Object.entries(details)) await page.locator(`[name="${key}"]`).fill(value);
   assert.equal(await page.getByText('Send Email opens a draft', {exact:false}).count(),0);
   await page.route('**/api/contact',async route=>{await new Promise(r=>setTimeout(r,500));await route.fulfill({status:502,contentType:'application/json',body:JSON.stringify({message:'Test delivery failed'})})});
@@ -96,12 +99,24 @@ try {
   assert.equal(await page.locator('[name="firstName"]').isDisabled(),true);
   await page.getByRole('alert').filter({hasText:'Test delivery failed'}).waitFor();
   assert.equal(await page.locator('[name="message"]').inputValue(),details.message);
+  await page.reload();
+  assert.equal(await page.locator('.contact-form [role="alert"]').count(),0);
+  assert.equal(await page.locator('[name="message"]').inputValue(),'');
+  for(const [key,value] of Object.entries(details)) await page.locator(`[name="${key}"]`).fill(value);
   await page.unroute('**/api/contact');
   await page.locator('[name="email"]').fill('ui-success@example.com');
   await page.getByRole('button',{name:'Send Email',exact:true}).click();
-  await page.getByRole('status').filter({hasText:'Your message has been sent'}).waitFor();
+  await page.getByRole('heading',{name:'Email sent successfully'}).waitFor();
+  assert.equal(await page.locator('form.contact-form').count(),0);
+  assert.equal(await page.locator('[name="message"]').count(),0);
+  assert.equal(await page.locator('.contact-success').evaluate(e=>document.activeElement===e),true);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.reload();
+  assert.equal(await page.locator('form.contact-form').count(),1);
+  assert.equal(await page.locator('.contact-success').count(),0);
+  assert.equal(await page.locator('.contact-form [role="alert"]').count(),0);
   assert.equal(await page.locator('[name="message"]').inputValue(),'');
-  console.log('PASS email validation, escaped template, TLS SMTP recipient/reply-to, server rejection, rate limits, and form sending/success/error states');
+  console.log('PASS email validation, TLS SMTP delivery, single focus border, success panel, errors retaining details, and refresh resetting the form');
 } finally {
   if(browser) await browser.close();
   if(child) {const exited=new Promise(resolve=>child.once('exit',resolve));child.kill();await exited;}

@@ -1,11 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Icon from "./ui-icon";
 
 export default function ContactForm() {
   const [notice, setNotice] = useState("");
   const [sending, setSending] = useState(false);
   const [failed, setFailed] = useState(false);
+  const [sent, setSent] = useState(false);
+  const successRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (sent) {
+      successRef.current?.focus({ preventScroll: true });
+      successRef.current?.scrollIntoView({ block: "nearest", behavior: "instant" });
+    }
+  }, [sent]);
   async function sendEmail(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (sending) return;
@@ -23,7 +31,10 @@ export default function ContactForm() {
       const result = await response.json();
       setFailed(!response.ok);
       setNotice(result.message || "Please try again.");
-      if (response.ok) form.reset();
+      if (response.ok) {
+        form.reset();
+        setSent(true);
+      }
     } catch {
       setFailed(true);
       setNotice("Couldn't connect. Your details are still here; please try again.");
@@ -31,6 +42,20 @@ export default function ContactForm() {
       setSending(false);
     }
   }
+  if (sent) return (
+    <section
+      className="contact-form contact-success"
+      ref={successRef}
+      tabIndex={-1}
+      role="status"
+      aria-labelledby="contact-success-title"
+    >
+      <span className="contact-success-icon"><Icon name="check" size={32} /></span>
+      <h2 id="contact-success-title">Email sent successfully</h2>
+      <p>Your message has been sent to Sandip. Thank you for getting in touch!</p>
+      <span className="contact-success-note">Your enquiry includes all the details you submitted.</span>
+    </section>
+  );
   return (
     <form className="contact-form" onSubmit={sendEmail} aria-busy={sending}>
       <fieldset disabled={sending} className="contact-fields">
